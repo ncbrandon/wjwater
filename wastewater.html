@@ -1,16 +1,42 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>PDF Webpage View</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Hosted PDF</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+        }
+
+        .footer-link {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-    <iframe src="https://ncbrandon.github.io/wjwater/2024%20CCR.pdf" width="100%" height="800px">
+    <iframe src="https://ncbrandon.github.io/wjwater/2024%20CCR.pdf">
         <p>
-            This browser does not support PDFs. Please download the PDF to view it:
-            <a href="https://ncbrandon.github.io/wjwater/2024%20CCR.pdf"</a>.
+            This browser does not support PDFs.
+            <a href="https://ncbrandon.github.io/wjwater/2024%20CCR.pdf">Download the PDF</a>.
         </p>
     </iframe>
+
+    <a href="https://ncbrandon.github.io/wjwater/2024%20CCR.pdf" class="footer-link" download>Download PDF File</a>
 
 </body>
 </html>

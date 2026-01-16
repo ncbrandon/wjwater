@@ -1,11 +1,24 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>PDF.js viewer (encoded file param)</title>
+    <title>2024 CCR Report</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <iframe id="pdfViewer" width="100%" height="800" style="border:none;"></iframe>
-    <script>// Immutable (recommended) raw GitHub URL to your PDF const fileUrl = 'https://raw.githubusercontent.com/ncbrandon/wjwater/9c45501f793e9b4fa41558016accfd6d5f6e2ee2/2024 CCR.pdf'; // Encode the entire file URL as the file parameter const viewerBase = 'https://mozilla.github.io/pdf.js/web/viewer.html?file='; const viewerUrl = viewerBase + encodeURIComponent(fileUrl); // Set iframe src document.getElementById('pdfViewer').src = viewerUrl;</script>
+
+    <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ncbrandon/wjwater/main/2024%20CCR.pdf&embedded=true"></iframe>
+
 </body>
 </html>

@@ -8,14 +8,14 @@
 	<head>
 		<title>Town of West Jefferson</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=5, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 		<header id="header">
-			<h1>Town of West Jefferson</h1>
+			<h1>Town of West Jefferson</h1><br />
 			<p class="meta">Water Resources</p>
 		</header>
 
@@ -23,7 +23,7 @@
 			/* container */
 			#header {
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 				justify-content: space-between; /* h1 left, p right */
 				gap: 0.5rem;
 				padding: 0.5rem 1rem;
@@ -45,14 +45,14 @@
 
 				/* responsive font sizes: h1 scales between 18px and 28px depending on viewport */
 				#header h1 {
-					font-size: clamp(18px, 4.5vw, 28px);
+					font-size: clamp(24px, 4.5vw, 40px);
 					font-weight: 600;
 					flex: 0 1 auto; /* allow it to shrink a bit */
 				}
 
 				/* meta text a bit smaller; allow it to shrink more if needed */
 				#header .meta {
-					font-size: clamp(12px, 3.2vw, 14px);
+					font-size: clamp(18px, 3.2vw, 32px);
 					color: #666;
 					flex: 0 0 auto; /* keep it from stretching; it will ellipsize */
 				}
@@ -61,7 +61,7 @@
 		<!--<a href="ccr.html" target="https://townofwj-my.sharepoint.com/:b:/p/wwtp/Ebj2YzQz6s5PlZg484p22VAB7umOGz2LOSzTjL24jkRTQg?e=G0aksW">CCR</a>-->
 		</p>
 		<p><a href="ccr.html">Consumer Confidence Report 2025</a></p>
-		<p><a href="wastewater.html">Wastewater Report 2025</a></p>
+		<p><a href="wwtp.html">Wastewater Report 2025</a></p>
 		<p><a href="wastewater1.html">Wastewater Report 2026</a></p>
 		</header>
 

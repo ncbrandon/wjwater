@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-label="Abstract mountain stream background">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d7ecf5"/>
+      <stop offset="45%" stop-color="#eef7f0"/>
+      <stop offset="100%" stop-color="#cfe5d7"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f8ba3" stop-opacity="0.65"/>
+      <stop offset="45%" stop-color="#d4edf4" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#2f6f83" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.08"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#sky)"/>
+  <g opacity="0.55" filter="url(#soft)">
+    <path d="M-50 420 C240 260 410 370 610 260 C830 140 980 300 1170 210 C1390 105 1580 250 1850 130 L1850 1200 L-50 1200 Z" fill="#6ca875"/>
+    <path d="M-60 580 C190 430 370 520 555 410 C750 295 930 450 1100 345 C1320 205 1510 385 1850 270 L1850 1200 L-60 1200 Z" fill="#456e56" opacity="0.72"/>
+  </g>
+  <path d="M-70 820 C135 760 220 690 390 720 C580 755 690 600 870 615 C1070 632 1160 805 1390 735 C1580 680 1690 755 1870 700 L1870 1200 L-70 1200 Z" fill="url(#water)"/>
+  <g opacity="0.55">
+    <path d="M0 900 C170 820 310 950 480 860 C650 770 790 900 965 820 C1135 742 1290 905 1460 825 C1600 760 1705 810 1800 780" fill="none" stroke="#f5fbff" stroke-width="22" stroke-linecap="round"/>
+    <path d="M0 1015 C160 930 295 1040 455 965 C650 860 825 1025 1010 920 C1195 815 1345 1010 1510 930 C1650 860 1740 915 1800 890" fill="none" stroke="#eef8fb" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+    <path d="M170 790 C300 760 420 805 510 755 M940 690 C1030 670 1130 705 1210 668 M1290 795 C1395 760 1510 805 1600 770" fill="none" stroke="#eef8fb" stroke-width="9" stroke-linecap="round" opacity="0.75"/>
+  </g>
+  <g opacity="0.48">
+    <ellipse cx="335" cy="890" rx="120" ry="48" fill="#82877c"/>
+    <ellipse cx="530" cy="825" rx="90" ry="40" fill="#a19d8f"/>
+    <ellipse cx="1255" cy="865" rx="150" ry="58" fill="#817e73"/>
+    <ellipse cx="1510" cy="780" rx="120" ry="48" fill="#aaa38f"/>
+    <ellipse cx="1040" cy="1020" rx="170" ry="60" fill="#9e998b"/>
+  </g>
+  <g opacity="0.35">
+    <circle cx="120" cy="160" r="48" fill="#6fa36e"/><circle cx="210" cy="135" r="62" fill="#80b47b"/><circle cx="310" cy="180" r="52" fill="#60915f"/>
+    <circle cx="1510" cy="150" r="58" fill="#75a973"/><circle cx="1625" cy="120" r="72" fill="#8abc7f"/><circle cx="1740" cy="178" r="56" fill="#669865"/>
+  </g>
+  <rect width="1800" height="1200" filter="url(#grain)"/>
+  <rect width="1800" height="1200" fill="rgba(255,255,255,0.14)"/>
+</svg>

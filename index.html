@@ -1,83 +1,263 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Town of West Jefferson</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=5, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Header -->
-		<header id="header">
-			<h1>Town of West Jefferson Water Resources</h1>
-			
-		</header>
+    <title>Town of West Jefferson Water Resources</title>
+    <meta name="description" content="Public water and wastewater reports for the Town of West Jefferson Water Resources Department, including CCR, wastewater reports, and lead service line inventory information." />
 
-		<style>
-			/* container */
-			#header {
-				display: flex;
-				align-items: flex-start;
-				justify-content: space-between; /* h1 left, p right */
-				gap: 0.5rem;
-				padding: 0.5rem 1rem;
-			}
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-				/* make flex children respect overflow clipping */
-				#header > * {
-					min-width: 0;
-					margin: 0;
-				}
+    <style>
+        :root {
+            --page-bg: #f4f7fb;
+            --card-bg: rgba(255, 255, 255, 0.94);
+            --text-main: #1f2933;
+            --text-muted: #52616b;
+            --accent: #005ea8;
+            --accent-dark: #004b86;
+            --border: rgba(0, 0, 0, 0.08);
+            --shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+        }
 
-				/* prevent wrapping and enable ellipsis if space is tight */
-				#header h1,
-				#header .meta {
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-				}
+        * {
+            box-sizing: border-box;
+        }
 
-				/* responsive font sizes: h1 scales between 18px and 28px depending on viewport */
-				#header h1 {
-					font-size: clamp(24px, 4.5vw, 40px);
-					font-weight: 600;
-					flex: 0 1 auto; /* allow it to shrink a bit */
-				}
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #e7f1fb 0%, #f4f7fb 45%, #ffffff 100%);
+            color: var(--text-main);
+        }
 
-				/* meta text a bit smaller; allow it to shrink more if needed */
-				#header .meta {
-					font-size: clamp(18px, 3.2vw, 32px);
-					color: #666;
-					flex: 0 0 auto; /* keep it from stretching; it will ellipsize */
-				}
-		</style><br />
-		<!--<a href="https://townofwj-my.sharepoint.com/:b:/p/wwtp/Ebj2YzQz6s5PlZg484p22VAB7umOGz2LOSzTjL24jkRTQg?e=G0aksW">CCR</a>-->
-		<!--<a href="ccr.html" target="https://townofwj-my.sharepoint.com/:b:/p/wwtp/Ebj2YzQz6s5PlZg484p22VAB7umOGz2LOSzTjL24jkRTQg?e=G0aksW">CCR</a>-->
-		</p>
-		<p><a href="ccr.html">Consumer Confidence Report 2025</a></p>
-		<p><a href="wwtp.html">Wastewater Report 2025</a></p>
-		<p><a href="lsli.html">Lead Service Line Inventory</a></p>
-		</header>
+        .page {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+            padding: 32px 18px 48px;
+        }
 
-		<!-- Signup Form -->
-		<!-- Footer
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
+        .hero {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: clamp(24px, 5vw, 48px);
+            margin-bottom: 24px;
+        }
 
-		</footer>-->
-		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
+        .eyebrow {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+        }
 
-	</body>
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 6vw, 4rem);
+            line-height: 1.05;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            max-width: 760px;
+            margin: 18px 0 0;
+            font-size: clamp(1rem, 2.4vw, 1.25rem);
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 16px 18px;
+            border-left: 5px solid var(--accent);
+            background: #eef7ff;
+            border-radius: 12px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .notice strong {
+            color: var(--accent-dark);
+        }
+
+        .section-heading {
+            margin: 28px 0 14px;
+            font-size: 1.35rem;
+            color: var(--text-main);
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 245px;
+            padding: 22px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        }
+
+        .report-card:hover,
+        .report-card:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+            border-color: rgba(0, 94, 168, 0.35);
+            outline: none;
+        }
+
+        .report-label {
+            width: fit-content;
+            padding: 5px 10px;
+            margin-bottom: 14px;
+            border-radius: 999px;
+            background: #e6f2fb;
+            color: var(--accent-dark);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .report-card h2 {
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+            color: var(--text-main);
+        }
+
+        .report-card p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .report-action {
+            margin-top: auto;
+            padding-top: 22px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .archive {
+            margin-top: 24px;
+            padding: 20px 22px;
+            background: rgba(255, 255, 255, 0.84);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .archive h2 {
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+        }
+
+        .archive p {
+            margin: 0 0 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .archive a {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .footer {
+            margin-top: 28px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 850px) {
+            .report-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .report-card {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <section class="hero">
+            <p class="eyebrow">Public Reports & Documents</p>
+            <h1>Town of West Jefferson Water Resources</h1>
+
+            <p class="subtitle">
+                View current public water and wastewater documents, including the annual Consumer Confidence Report,
+                wastewater report, and lead service line inventory information.
+            </p>
+
+            <div class="notice">
+                <strong>Looking for the Consumer Confidence Report?</strong>
+                The direct CCR page is still available at <a href="ccr.html">wjwater.org/ccr</a>.
+            </div>
+        </section>
+
+        <h2 class="section-heading">Current Reports</h2>
+
+        <section class="report-grid" aria-label="Current public reports">
+            <a class="report-card" href="ccr.html">
+                <span class="report-label">Drinking Water</span>
+                <h2>Consumer Confidence Report 2025</h2>
+                <p>
+                    Annual drinking water quality report for customers of the Town of West Jefferson water system.
+                </p>
+                <span class="report-action">View CCR Report →</span>
+            </a>
+
+            <a class="report-card" href="wwtp.html">
+                <span class="report-label">Wastewater</span>
+                <h2>Wastewater Report 2025</h2>
+                <p>
+                    Annual wastewater report and related information for the Town of West Jefferson.
+                </p>
+                <span class="report-action">View Wastewater Report →</span>
+            </a>
+
+            <a class="report-card" href="lsli.html">
+                <span class="report-label">Service Lines</span>
+                <h2>Lead Service Line Inventory</h2>
+                <p>
+                    Public information about service line materials and the lead service line inventory.
+                </p>
+                <span class="report-action">View Inventory →</span>
+            </a>
+        </section>
+
+        <section class="archive">
+            <h2>Previous Reports</h2>
+            <p>
+                Previous annual reports may be made available here as they are added.
+            </p>
+            <a href="2024%20CCR.pdf">View 2024 Consumer Confidence Report</a>
+        </section>
+
+        <footer class="footer">
+            <p>
+                For questions about these reports, contact the Town of West Jefferson Water Resources Department.
+            </p>
+        </footer>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
